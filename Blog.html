@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidado Animal - Blog</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Navegación */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c5f2d;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #2c5f2d;
+    }
+
+    /* Secciones */
+    section {
+      min-height: 100%;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .section-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Blog */
+    #blog {
+      background: #f8f9fa;
+    }
+
+    #blog h2 {
+      color: #2c5f2d;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .blog-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .blog-card-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      font-size: 3.5rem;
+    }
+
+    .blog-card-content {
+      padding: 2rem;
+    }
+
+    .blog-card h3 {
+      color: #2c5f2d;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .blog-card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      color: #667eea;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .read-more:hover {
+      color: #2c5f2d;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+      }
+
+      section {
+        padding: 5rem 1rem 3rem;
+      }
+
+      #blog h2 {
+        font-size: 2rem;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .blog-card-content {
+        padding: 1.5rem;
+      }
+
+      .blog-card-header {
+        padding: 2rem 1.5rem;
+        font-size: 3rem;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navegación -->
+  <nav>
+   <div class="nav-container">
+    <div class="logo" id="site-title">
+     🐾 Cuidado Animal
+    </div>
+    <ul class="nav-links">
+     <li><a href="#inicio">Inicio</a></li>
+     <li><a href="#nosotros">Nosotros</a></li>
+     <li><a href="#contacto">Contacto</a></li>
+     <li><a href="#blog">Blog</a></li>
+    </ul>
+   </div>
+  </nav><!-- Sección Blog -->
+  <section id="blog">
+   <div class="section-content">
+    <h2 id="blog-title">Blog de Cuidado Animal</h2>
+    <p class="blog-subtitle" id="blog-subtitle">Consejos y guías para el cuidado de tus mascotas</p>
+    <div class="blog-grid">
+     <div class="blog-card">
+      <div class="blog-card-header">
+       🐕
+      </div>
+      <div class="blog-card-content">
+       <h3>Nutrición Canina Esencial</h3>
+       <p>Descubre los mejores alimentos para mantener a tu perro saludable y lleno de energía. Una dieta balanceada es fundamental para su bienestar y longevidad.</p><a href="#" class="read-more">Leer más →</a>
+      </div>
+     </div>
+     <div class="blog-card">
+      <div class="blog-card-header">
+       🐈
+      </div>
+      <div class="blog-card-content">
+       <h3>Cuidados Especiales para Gatos</h3>
+       <p>Aprende sobre las necesidades específicas de los felinos, desde su higiene hasta su comportamiento natural y cómo mantenerlos felices en casa.</p><a href="#" class="read-more">Leer más →</a>
+      </div>
+     </div>
+     <div class="blog-card">
+      <div class="blog-card-header">
+       💉
+      </div>
+      <div class="blog-card-content">
+       <h3>Calendario de Vacunación</h3>
+       <p>Conoce el calendario de vacunación recomendado para proteger a tu mascota de enfermedades comunes y mantener su salud al día.</p><a href="#" class="read-more">Leer más →</a>
+      </div>
+     </div>
+     <div class="blog-card">
+      <div class="blog-card-header">
+       🎾
+      </div>
+      <div class="blog-card-content">
+       <h3>Ejercicio y Actividad Física</h3>
+       <p>La actividad física es vital para el bienestar de tu mascota. Descubre rutinas de ejercicio y juegos divertidos para cada edad y raza.</p><a href="#" class="read-more">Leer más →</a>
+      </div>
+     </div>
+     <div class="blog-card">
+      <div class="blog-card-header">
+       🛁
+      </div>
+      <div class="blog-card-content">
+       <h3>Higiene y Aseo Personal</h3>
+       <p>Consejos prácticos para mantener la higiene de tu mascota, incluyendo técnicas de baño, cepillado y cuidado dental regular.</p><a href="#" class="read-more">Leer más →</a>
+      </div>
+     </div>
+     <div class="blog-card">
+      <div class="blog-card-header">
+       🏠
+      </div>
+      <div class="blog-card-content">
+       <h3>Adaptación al Nuevo Hogar</h3>
+       <p>Guía completa para ayudar a tu nueva mascota a adaptarse a su nuevo hogar y crear un ambiente seguro y acogedor para todos.</p><a href="#" class="read-more">Leer más →</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <script>
+    const defaultConfig = {
+      site_title: "🐾 Cuidado Animal",
+      blog_title: "Blog de Cuidado Animal",
+      blog_subtitle: "Consejos y guías para el cuidado de tus mascotas",
+      background_color: "#f8f9fa",
+      secondary_surface_color: "#ffffff",
+      text_color: "#333333",
+      primary_action_color: "#2c5f2d",
+      secondary_action_color: "#667eea",
+      font_family: "Segoe UI",
+      font_size: 16
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'Tahoma, Geneva, Verdana, sans-serif';
+      const baseSize = config.font_size || defaultConfig.font_size;
+
+      // Actualizar colores
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const secondarySurfaceColor = config.secondary_surface_color || defaultConfig.secondary_surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.getElementById('blog').style.background = backgroundColor;
+      document.querySelector('nav').style.background = secondarySurfaceColor;
+      document.querySelectorAll('.blog-card').forEach(el => {
+        el.style.background = secondarySurfaceColor;
+      });
+
+      document.querySelectorAll('.blog-card-header').forEach(el => {
+        el.style.background = `linear-gradient(135deg, ${secondaryActionColor} 0%, #764ba2 100%)`;
+      });
+
+      document.body.style.color = textColor;
+      document.querySelectorAll('.nav-links a').forEach(el => {
+        el.style.color = textColor;
+      });
+
+      document.querySelectorAll('.logo, #blog-title, .blog-card h3').forEach(el => {
+        el.style.color = primaryActionColor;
+      });
+
+      document.querySelectorAll('.blog-card p, .blog-subtitle').forEach(el => {
+        el.style.color = '#666';
+      });
+
+      document.querySelectorAll('.read-more').forEach(el => {
+        el.style.color = secondaryActionColor;
+      });
+
+      // Actualizar fuentes
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+
+      // Actualizar tamaños de fuente
+      document.getElementById('blog-title').style.fontSize = `${baseSize * 1.5625}px`;
+      document.getElementById('blog-subtitle').style.fontSize = `${baseSize * 1.125}px`;
+      document.getElementById('site-title').style.fontSize = `${baseSize * 0.9375}px`;
+      document.querySelectorAll('.nav-links a').forEach(el => {
+        el.style.fontSize = `${baseSize}px`;
+      });
+      document.querySelectorAll('.blog-card h3').forEach(el => {
+        el.style.fontSize = `${baseSize * 1.25}px`;
+      });
+      document.querySelectorAll('.blog-card p').forEach(el => {
+        el.style.fontSize = `${baseSize}px`;
+      });
+      document.querySelectorAll('.read-more').forEach(el => {
+        el.style.fontSize = `${baseSize * 0.875}px`;
+      });
+
+      // Actualizar textos editables
+      document.getElementById('site-title').textContent = config.site_title || defaultConfig.site_title;
+      document.getElementById('blog-title').textContent = config.blog_title || defaultConfig.blog_title;
+      document.getElementById('blog-subtitle').textContent = config.blog_subtitle || defaultConfig.blog_subtitle;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_surface_color || defaultConfig.secondary_surface_color,
+            set: (value) => {
+              config.secondary_surface_color = value;
+              window.elementSdk.setConfig({ secondary_surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["site_title", config.site_title || defaultConfig.site_title],
+        ["blog_title", config.blog_title || defaultConfig.blog_title],
+        ["blog_subtitle", config.blog_subtitle || defaultConfig.blog_subtitle]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a5284a324d6f26',t:'MTc2MjQzODA0OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
